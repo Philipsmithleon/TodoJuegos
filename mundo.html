@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoJuegos - Mundo Abierto</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          >Todo<span style="color: #ffa500">Juegos</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registro.html">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Iniciar Sesión</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h2 class="text-center">Mundo Abierto</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card mb-4">
+            <img
+              src="img/gtav.png"
+              class="card-img-top"
+              alt="Grand Theft Auto V"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Grand Theft Auto V</h5>
+              <p class="card-text price">CLP$ 60.000</p>
+              <p class="d-none long-description">
+                Grand Theft Auto V es un juego de mundo abierto donde los
+                jugadores pueden explorar la ciudad ficticia de Los Santos y
+                participar en una variedad de actividades, desde misiones de
+                historia hasta eventos aleatorios y carreras.
+              </p>
+              <a href="detalle.html" class="btn btn-primary view-details"
+                >Ver detalles</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card mb-4">
+            <img
+              src="img/reddeadredemption2.png"
+              class="card-img-top"
+              alt="Red Dead Redemption 2"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Red Dead Redemption 2</h5>
+              <p class="card-text price">CLP$ 55.000</p>
+              <p class="d-none long-description">
+                Red Dead Redemption 2 es un juego de mundo abierto ambientado en
+                el Viejo Oeste, donde los jugadores pueden explorar vastos
+                paisajes, participar en tiroteos, cazar, y seguir una historia
+                épica de forajidos.
+              </p>
+              <a href="detalle.html" class="btn btn-primary view-details"
+                >Ver detalles</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-2 d-flex align-items-center justify-content-center">
+        <p>TodoJuegos, todos los derechos reservados.</p>
+      </footer>
+  </body>
+</html>

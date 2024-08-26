@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoJuegos - Carreras</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          >Todo<span style="color: #ffa500">Juegos</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registro.html">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Iniciar Sesión</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h2 class="text-center">Carreras</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card mb-4">
+            <img
+              src="img/forza.png"
+              class="card-img-top"
+              alt="Forza Horizon 5"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Forza Horizon 5</h5>
+              <p class="card-text price">CLP$ 55.000</p>
+              <p class="d-none long-description">
+                Forza Horizon 5 es un juego de carreras de mundo abierto que
+                lleva a los jugadores a recorrer paisajes impresionantes y
+                competir en eventos emocionantes con una amplia variedad de
+                coches, en un entorno de México recreado con gran detalle.
+              </p>
+              <a href="detalle.html" class="btn btn-primary view-details"
+                >Ver detalles</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card mb-4">
+            <img
+              src="img/needforspeed.png"
+              class="card-img-top"
+              alt="Need for Speed: Heat"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Need for Speed: Heat</h5>
+              <p class="card-text price">CLP$ 50.000</p>
+              <p class="d-none long-description">
+                Need for Speed: Heat es un juego de carreras que mezcla la
+                emoción de las carreras callejeras con la persecución de la
+                policía en un entorno urbano. Compite para ganar dinero y
+                mejoras mientras evitas ser atrapado.
+              </p>
+              <a href="detalle.html" class="btn btn-primary view-details"
+                >Ver detalles</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-2 d-flex align-items-center justify-content-center">
+        <p>TodoJuegos, todos los derechos reservados.</p>
+      </footer>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoJuegos - Registro de usuario</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+      .modal-header.bg-success {
+        background-color: #28a745;
+        color: white;
+      }
+      .modal-header.bg-danger {
+        background-color: #dc3545;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          >Todo<span style="color: #ffa500">Juegos</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h2>Registro de usuario</h2>
+      <form id="registrationForm">
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Nombre completo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fullName"
+            name="fullName"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="username" class="form-label">Nombre de usuario</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Introduce un correo electrónico válido con un dominio adecuado (por ejemplo, usuario@ejemplo.com)."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            required
+            minlength="6"
+            maxlength="18"
+            pattern="(?=.*\d)(?=.*[A-Z]).{6,18}"
+            title="La contraseña debe tener entre 6 y 18 caracteres, contener al menos un número y una letra mayúscula."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label"
+            >Repetir contraseña</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="birthdate" class="form-label">Fecha de nacimiento</label>
+          <input
+            type="date"
+            class="form-control"
+            id="birthdate"
+            name="birthdate"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">Dirección de despacho</label>
+          <input type="text" class="form-control" id="address" name="address" />
+        </div>
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+        <button type="reset" class="btn btn-secondary">
+          Limpiar formulario
+        </button>
+      </form>
+    </div>
+
+    <div
+      class="modal fade"
+      id="feedbackModal"
+      tabindex="-1"
+      aria-labelledby="feedbackModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success" id="modalHeader">
+            <h5 class="modal-title" id="feedbackModalLabel">Éxito</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="modalBody">
+            Los datos fueron ingresados correctamente.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Error -->
+    <div
+      class="modal fade"
+      id="errorModal"
+      tabindex="-1"
+      aria-labelledby="errorModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-danger" id="errorModalHeader">
+            <h5 class="modal-title" id="errorModalLabel">Error</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="errorModalBody">
+            Ocurrió un error. Por favor, revisa los datos ingresados.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+          const birthdate = new Date(
+            document.getElementById("birthdate").value
+          );
+          const today = new Date();
+          const age = today.getFullYear() - birthdate.getFullYear();
+          const monthDiff = today.getMonth() - birthdate.getMonth();
+
+          if (
+            monthDiff < 0 ||
+            (monthDiff === 0 && today.getDate() < birthdate.getDate())
+          ) {
+            age--;
+          }
+
+          if (password !== confirmPassword) {
+            document.getElementById("errorModalBody").textContent =
+              "Las contraseñas no coinciden.";
+            document
+              .getElementById("errorModalHeader")
+              .classList.add("bg-danger");
+            document.getElementById("feedbackModal").classList.remove("show");
+            document.getElementById("errorModal").classList.add("show");
+            event.preventDefault();
+          } else if (age < 13) {
+            document.getElementById("errorModalBody").textContent =
+              "Debes tener al menos 13 años para registrarte.";
+            document
+              .getElementById("errorModalHeader")
+              .classList.add("bg-danger");
+            document.getElementById("feedbackModal").classList.remove("show");
+            document.getElementById("errorModal").classList.add("show");
+            event.preventDefault();
+          } else {
+            document.getElementById("feedbackModal").classList.add("show");
+            document.getElementById("errorModal").classList.remove("show");
+          }
+        });
+    </script>
+        <footer class="bg-dark text-white text-center py-2 d-flex align-items-center justify-content-center">
+            <p>TodoJuegos, todos los derechos reservados.</p>
+          </footer>
+  </body>
+</html>
