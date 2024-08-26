@@ -117,3 +117,14 @@ img.img-fluid {
     max-height: 400px;
     object-fit: cover;
 }
+.modal-body{
+  color: black;
+}
+.modal-header.bg-success {
+  background-color: #28a745;
+  color: white;
+}
+.modal-header.bg-danger {
+  background-color: #dc3545;
+  color: white;
+}
